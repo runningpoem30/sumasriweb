@@ -1,7 +1,6 @@
 import { Leaf, Award, Truck, Globe, Users, Trophy, Phone, Mail, MapPin } from 'lucide-react';
 import Header from '@/components/Header';
 import ProductCard from '@/components/ProductCard';
-import StrengthCard from '@/components/StrengthCard';
 
 // Import all images
 import heroShrimp from '@/assets/hero-shrimp.jpg';
@@ -61,15 +60,6 @@ const Index = () => {
     }
   ];
 
-  const strengths = [
-    { icon: Leaf, title: "Sustainable Farming" },
-    { icon: Award, title: "High-Quality Produce" },
-    { icon: Truck, title: "Reliable Distribution" },
-    { icon: Globe, title: "Wide Market Reach" },
-    { icon: Users, title: "Expert Team" },
-    { icon: Trophy, title: "Industry Recognition" }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -85,20 +75,20 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-hero"></div>
         </div>
         <div className="relative z-10 text-center text-white px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight tracking-tight">
             One of the largest producers of shrimps in Andhra Pradesh
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto font-light">
             Premium quality seafood with sustainable practices and reliable distribution
           </p>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-6">
+      <section id="about" className="py-24 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">About Us</h2>
-          <div className="text-lg text-muted-foreground leading-relaxed text-center space-y-6">
+          <h2 className="text-3xl md:text-4xl font-light text-center text-foreground mb-16 tracking-tight">About Us</h2>
+          <div className="text-base md:text-lg text-muted-foreground leading-relaxed text-center space-y-8 font-light">
             <p>
               With decades of experience in aquaculture, we have established ourselves as one of the most trusted 
               shrimp producers in Andhra Pradesh. Our commitment to sustainable farming practices and quality 
@@ -114,15 +104,15 @@ const Index = () => {
       </section>
 
       {/* Vannamei Shrimp USP Section */}
-      <section className="py-20 px-6 bg-muted/30">
+      <section className="py-24 px-6 bg-muted/40">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-4">Vannamei Shrimp</h2>
-              <h3 className="text-2xl font-semibold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 tracking-tight">Vannamei Shrimp</h2>
+              <h3 className="text-xl md:text-2xl font-light text-primary mb-8">
                 One of the largest producers of Vannamei shrimps in India
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
                 Our Vannamei shrimp, also known as white leg shrimp, represents the pinnacle of aquaculture 
                 excellence. These premium crustaceans are prized for their clean taste, firm texture, and 
                 consistent quality. Through advanced farming techniques and strict quality controls, we deliver 
@@ -133,7 +123,7 @@ const Index = () => {
               <img
                 src={vannameiShrimp}
                 alt="Premium Vannamei shrimp"
-                className="w-full h-96 object-cover rounded-lg shadow-ocean"
+                className="w-full h-96 object-cover rounded-lg shadow-card"
               />
             </div>
           </div>
@@ -141,14 +131,14 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-6">
+      <section id="products" className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Products</h2>
+          <h2 className="text-3xl md:text-4xl font-light text-center text-foreground mb-20 tracking-tight">Products</h2>
           
           {/* Tank Products */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Tank Products</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+          <div className="mb-20">
+            <h3 className="text-xl md:text-2xl font-light text-foreground mb-12 text-center tracking-tight">Tank Products</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {tankProducts.map((product, index) => (
                 <ProductCard
                   key={index}
@@ -162,11 +152,23 @@ const Index = () => {
 
           {/* Sea Products */}
           <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">Sea Products</h3>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {seaProducts.map((product, index) => (
+            <h3 className="text-xl md:text-2xl font-light text-foreground mb-12 text-center tracking-tight">Sea Products</h3>
+            {/* First row - 3 products */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
+              {seaProducts.slice(0, 3).map((product, index) => (
                 <ProductCard
                   key={index}
+                  image={product.image}
+                  title={product.title}
+                  description={product.description}
+                />
+              ))}
+            </div>
+            {/* Second row - 2 products */}
+            <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              {seaProducts.slice(3, 5).map((product, index) => (
+                <ProductCard
+                  key={index + 3}
                   image={product.image}
                   title={product.title}
                   description={product.description}
@@ -178,55 +180,88 @@ const Index = () => {
       </section>
 
       {/* Strengths Section */}
-      <section className="py-20 px-6 bg-muted/30">
+      <section className="py-24 px-6 bg-muted/40">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-16">Our Strengths</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {strengths.map((strength, index) => (
-              <StrengthCard
-                key={index}
-                icon={strength.icon}
-                title={strength.title}
-              />
-            ))}
+          <h2 className="text-3xl md:text-4xl font-light text-center text-foreground mb-20 tracking-tight">Our Strengths</h2>
+          <div className="grid md:grid-cols-2 gap-12 text-center md:text-left">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">Sustainable Farming</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Our eco-friendly aquaculture practices ensure environmental responsibility while maintaining premium quality standards in every batch of shrimp we produce.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">High-Quality Produce</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Rigorous quality control measures and advanced processing techniques guarantee consistently superior shrimp that meet international food safety standards.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">Reliable Distribution</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Our efficient supply chain network ensures timely delivery of fresh, high-quality shrimp to customers across India and international markets.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">Wide Market Reach</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Strong partnerships with distributors and retailers enable us to serve diverse markets, from local restaurants to international seafood exporters.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">Expert Team</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Our experienced aquaculture specialists and quality assurance professionals bring decades of expertise to every aspect of shrimp production.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-3 tracking-tight">Industry Recognition</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Certified by leading food safety organizations and recognized for excellence in sustainable aquaculture practices throughout the industry.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer / Contact Section */}
-      <footer id="contact" className="py-16 px-6 bg-primary text-primary-foreground">
+      <footer id="contact" className="py-20 px-6 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-light text-center mb-16 tracking-tight">Contact Us</h2>
+          <div className="grid md:grid-cols-3 gap-12 text-center">
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 mb-4 text-accent" />
-              <h3 className="text-xl font-semibold mb-2">Address</h3>
-              <p className="text-primary-foreground/80">
+              <MapPin className="w-6 h-6 mb-4 text-accent" />
+              <h3 className="text-lg font-medium mb-4 tracking-tight">Address</h3>
+              <p className="text-primary-foreground/75 font-light leading-relaxed">
                 Aquaculture Complex<br />
                 Vijayawada, Andhra Pradesh<br />
                 India - 520001
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 mb-4 text-accent" />
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
-              <p className="text-primary-foreground/80">
+              <Phone className="w-6 h-6 mb-4 text-accent" />
+              <h3 className="text-lg font-medium mb-4 tracking-tight">Phone</h3>
+              <p className="text-primary-foreground/75 font-light leading-relaxed">
                 +91 98765 43210<br />
                 +91 87654 32109
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 mb-4 text-accent" />
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-primary-foreground/80">
-                info@aquashrimp.com<br />
-                sales@aquashrimp.com
+              <Mail className="w-6 h-6 mb-4 text-accent" />
+              <h3 className="text-lg font-medium mb-4 tracking-tight">Email</h3>
+              <p className="text-primary-foreground/75 font-light leading-relaxed">
+                info@sumasriaqua.com<br />
+                sales@sumasriaqua.com
               </p>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
-            <p className="text-primary-foreground/60">
-              © 2024 AquaShrimp. All rights reserved.
+          <div className="mt-16 pt-8 border-t border-primary-foreground/20 text-center">
+            <p className="text-primary-foreground/60 font-light">
+              © 2024 SumasriAqua. All rights reserved.
             </p>
           </div>
         </div>
