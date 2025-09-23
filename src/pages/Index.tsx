@@ -256,9 +256,7 @@ const Index = () => {
   className="py-24 px-6 text-white"
 >
 <div
-  className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out will-change-transform ${
-    productVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-  }`}
+ className="container mx-auto max-w-6xl"
 >
 
     <h2 className="text-3xl md:text-6xl font-bodoni font-light text-center text-gray-800 mb-10 tracking-tight">
