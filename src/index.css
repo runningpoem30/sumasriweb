@@ -127,3 +127,11 @@ html {
     @apply bg-background text-foreground;
   }
 }
+/* src/index.css or globals.css */
+@font-face {
+  font-family: 'Futura';
+  src: url('/fonts/futura.woff2') format('woff2'),
+       url('/fonts/futura.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

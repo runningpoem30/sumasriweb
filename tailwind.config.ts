@@ -15,6 +15,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "sans-serif"],
+        futura: ["'Nunito Sans'", "sans-serif"],
+        gloock : ["Glook" , "serif"],
+        bodoni: ["Bodoni Moda", "serif"]
       },
       colors: {
         border: "hsl(var(--border))",
