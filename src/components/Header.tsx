@@ -25,7 +25,7 @@ const Header = () => {
   {/* Logo Icon */}
   <div
     onClick={() => scrollToSection('home')}
-    className="flex-shrink-0 cursor-pointer flex items-center sm:ml-[-50px] md:ml-[-100px]"
+    className="flex-shrink-0 cursor-pointer flex items-center sm:ml-[-50px] md:ml-[-60px]"
   >
     <img
       src={logoMain}
