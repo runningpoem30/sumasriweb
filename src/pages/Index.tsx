@@ -220,7 +220,7 @@ const Index = () => {
         }`}
       >
         <h2 className="text-3xl md:text-4xl font-bodoni font-light text-center text-white mb-10 tracking-tight">
-          One of the largest producers of Vannamei shrimps in India
+          One of the largest suppliers of Vannamei shrimps in India
         </h2>
         <h3 className="text-xl md:text-2xl font-light text-primary mb-8"></h3>
         <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-bodoni text-gray-400">
@@ -255,11 +255,12 @@ const Index = () => {
   ref={productsRef}   // Add this ref
   className="py-24 px-6 text-white"
 >
-  <div
-    className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out ${
-      productVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-    }`}  // Add visibility animation
-  >
+<div
+  className={`container mx-auto max-w-6xl transition-all duration-1000 ease-out will-change-transform ${
+    productVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+  }`}
+>
+
     <h2 className="text-3xl md:text-6xl font-bodoni font-light text-center text-gray-800 mb-10 tracking-tight">
       OUR PRODUCTS
     </h2>
@@ -394,7 +395,7 @@ const Index = () => {
       </div>
       <div>
            <h1 className='text-2xl lg:text-3xl font-bodoni mb-2'>
-    Relangi Mahesh Gowd (s/o RVR)
+    Relangi Mahesh Gowd 
     </h1>
     <p>+91 63054 81230</p>
     <p>
