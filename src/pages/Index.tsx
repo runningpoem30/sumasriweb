@@ -157,7 +157,7 @@ const Index = () => {
      <h1 className='font-bodoni text-4xl text-white text-[45px] lg:text-[175px] font-light'>SUMASRI AQUA</h1>
   </div>
   <div className='lg:mt-20'>
-     <h2 className='font-bodoni text-4xl text-white text-[20px] lg:text-[40px] font-light'>One of the larget shrimp suppliers in Andhra Pradesh</h2>
+     <h2 className='font-bodoni text-4xl text-white text-[20px] lg:text-[40px] font-light'>One of the largest shrimp suppliers in Andhra Pradesh</h2>
   </div>
   </div>
   
