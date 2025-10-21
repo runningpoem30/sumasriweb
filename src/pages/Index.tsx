@@ -29,6 +29,7 @@ import seaBlackTigerShrimp from '@/assets/seablacktigershrimp.webp'
 import seaBrownShrimp from '@/assets/seabrownshrimp.jpg'
 import redTinyShrimp from'@/assets/redTinyShrimp.webp'
 import seaBrownShrimpFinal from '@/assets/image-copy.png'
+import culturedBlackTiger from '@/assets/culturedblacktiger.png'
 
 const Index = () => {
   const aboutRef = useRef(null)
@@ -134,9 +135,9 @@ const Index = () => {
   description: "Also known as Pink Shrimp , it is rich-flavored  with firm texture, popular in traditional and specialty seafood dishes."
 },
 {
-  image: redTinyShrimp,
-  title: "Sea Red Tiny",
-  description: "Small, vibrant red shrimp with a sweet taste, perfect for delicate culinary preparations."
+  image: culturedBlackTiger,
+  title: "Cultured Black Tiger",
+  description: "These shrimp are prized for their bold stripes, firm texture, and delicious taste. They are commonly farmed in coastal areas and valued for their high export potential."
 }
 
   ];
